@@ -42,14 +42,14 @@
 
         <section id="habilidades">
             <h1>
-                <i class="fa-solid fa-screwdriver"></i> Habilidades
+                <i class="fa-solid fa-book"></i> Habilidades
             </h1>
             <aside class="skill-container">
                 <h2>Hard Skills</h2>
 
                 <div class="info">
                     <span class="skill">
-                        HTML 5
+                        <i class="fa-solid fa-code"></i> HTML 5
                     </span>
                     <span class="level">
                         70%
@@ -61,7 +61,7 @@
 
                 <div class="info">
                     <span class="skill">
-                        CSS 3
+                        <i class="fa-solid fa-code"></i> CSS 3
                     </span>
                     <span class="level">
                         80%
@@ -73,7 +73,7 @@
 
                 <div class="info">
                     <span class="skill">
-                        JAVASCRIPT
+                        <i class="fa-solid fa-code"></i> JAVASCRIPT
                     </span>
                     <span class="level">
                         30%
@@ -85,7 +85,7 @@
 
                 <div class="info">
                     <span class="skill">
-                        PYTHON 3
+                        <i class="fa-solid fa-code"></i> PYTHON 3
                     </span>
                     <span class="level">
                         40%
@@ -97,7 +97,7 @@
 
                 <div class="info">
                     <span class="skill">
-                        JAVA
+                        <i class="fa-solid fa-code"></i> JAVA
                     </span>
                     <span class="level">
                         50%
@@ -109,7 +109,7 @@
 
                 <div class="info">
                     <span class="skill">
-                        GIT / GITHUB
+                        <i class="fa-solid fa-code"></i> GIT / GITHUB
                     </span>
                     <span class="level">
                         80%
@@ -121,7 +121,7 @@
 
                 <div class="info">
                     <span class="skill">
-                        ARQUITETURA DE SOFTWARE
+                        <i class="fa-solid fa-code"></i> ARQUITETURA DE SOFTWARE
                     </span>
                     <span class="level">
                         90%
@@ -137,7 +137,7 @@
 
                 <div class="info">
                     <span class="skill">
-                        INTELIGÊNCIA EMOCIONAL
+                        <i class="fa-solid fa-cloud"></i> INTELIGÊNCIA EMOCIONAL
                     </span>
                     <span class="level">
                         90%
@@ -149,7 +149,7 @@
 
                 <div class="info">
                     <span class="skill">
-                        RESOLUÇÃO DE PROBLEMAS
+                        <i class="fa-solid fa-cloud"></i> RESOLUÇÃO DE PROBLEMAS
                     </span>
                     <span class="level">
                         90%
@@ -161,7 +161,7 @@
 
                 <div class="info">
                     <span class="skill">
-                        TRABALHO EM EQUIPE
+                        <i class="fa-solid fa-cloud"></i> TRABALHO EM EQUIPE
                     </span>
                     <span class="level">
                         80%
@@ -173,7 +173,7 @@
 
                 <div class="info">
                     <span class="skill">
-                        RACIOCÍNIO LÓGICO
+                        <i class="fa-solid fa-cloud"></i> RACIOCÍNIO LÓGICO
                     </span>
                     <span class="level">
                         100%
@@ -185,7 +185,7 @@
 
                 <div class="info">
                     <span class="skill">
-                        GESTÃO DO TEMPO
+                        <i class="fa-solid fa-cloud"></i> GESTÃO DO TEMPO
                     </span>
                     <span class="level">
                         80%
@@ -197,7 +197,7 @@
 
                 <div class="info">
                     <span class="skill">
-                        FLEXIBILIDADE
+                        <i class="fa-solid fa-cloud"></i> FLEXIBILIDADE
                     </span>
                     <span class="level">
                         90%
@@ -209,7 +209,7 @@
 
                 <div class="info">
                     <span class="skill">
-                        RESILIÊNCIA
+                        <i class="fa-solid fa-cloud"></i> RESILIÊNCIA
                     </span>
                     <span class="level">
                         90%
@@ -221,7 +221,7 @@
 
                 <div class="info">
                     <span class="skill">
-                        AUTODIDATA
+                        <i class="fa-solid fa-cloud"></i> AUTODIDATA
                     </span>
                     <span class="level">
                         100%
@@ -233,7 +233,7 @@
 
                 <div class="info">
                     <span class="skill">
-                        ORGANIZAÇÃO
+                        <i class="fa-solid fa-cloud"></i> ORGANIZAÇÃO
                     </span>
                     <span class="level">
                         100%
@@ -293,25 +293,38 @@
             <h1>
                 <i class="fa-solid fa-mobile-screen-button"></i> Contato
             </h1>
-            <aside>
+            <aside id="formulario-container">
                 <div id="top-bar">
                     <i class="fa-solid fa-window-minimize"></i> <i class="fa-solid fa-expand"></i> <i class="fa-solid fa-xmark"></i>
                 </div>
-                <div id="form-contato">
-                    <span>NOME</span>
-                    <form action="#" method="post"></form>
-                    <span>EMAIL</span>
-                    <form action="#" method="post"></form>
-                    <span>MENSAGEM</span>
-                    <form action="#" method="post"></form>
+                <div>
+                    <div id="formulario">
+                        <form action="#" method="post" autocomplete="off" id="formulario-itens">
+                            <span>ENTRAR EM CONTATO COMIGO!</span>
+
+                            <label for="nome">NOME</label>
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+                            <label for="mensagem">MENSAGEM</label>
+                            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem" required></textarea>
+
+                            <button type="submit" id="botao">ENVIAR</button>
+                        </form>
+                    </div>
                 </div>
             </aside>
         </section>
     </main>
 
     <footer>
-        <hr>
-        <p>&copy; <strong>Leonardo Laranjeira</strong> - Todos os direitos reservados | Desenvolvido por <strong>Leonardo Laranjeira</strong></p>
+        <div id="icones">
+            <a href="https://github.com/leonardolaranjeira" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/leonardo-laranjeira-796a391b7/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <p>&copy; <strong><a href="https://github.com/leonardolaranjeira" target="_blank">Leonardo Laranjeira</a></strong> - Todos os direitos reservados | Desenvolvido por <strong><a href="https://www.linkedin.com/in/leonardo-laranjeira-796a391b7/" target="_blank">Leonardo Laranjeira</a></strong></p>
     </footer>
 
     <script src="script.js"></script>
