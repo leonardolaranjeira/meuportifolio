@@ -12,21 +12,25 @@
 <body>
     <header>
         <nav id="menu">
-            <a id="perfil" href="#" aria-label="Voltar para o topo da página">
+            <button id="perfil">
                 <img src="img/minhafoto.jpeg" alt="Foto de perfil">
                 <span>Leonardo Laranjeira</span>
-            </a>
-            <ul>
-                <li>
-                    <button type="button" id="bars_menu" aria-controls="menu-lateral" aria-expanded="false">
+            </button>
+            <div class="menu-botoes">
+                <button type="button" id="bars_menu" class="interacao" aria-controls="menu-lateral" aria-expanded="false">
                         <i class="fa-solid fa-bars"></i>
-                    </button>
-                </li>
-                <li>
-                    <button id="botao_tema">
+                </button>
+                <button class="interacao" id="tema" aria-label="Mudar tema da página">
                         <i class="fa-solid fa-palette"></i>
-                    </button>
-                </li>
+                </button>
+            </div>
+            <ul>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#certificacoes">Certificação</a></li>
+                <li><a href="#experiencia">Experiência</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -405,17 +409,19 @@
                 </div>
                 <div>
                     <div id="formulario">
-                        <form action="#" method="post" autocomplete="off" id="formulario-itens">
+                        <form action="https://formspree.io/f/xdkqzynq" method="post" autocomplete="off" id="formulario-itens">
                             <span>ENTRAR EM CONTATO COMIGO!</span>
 
                             <label for="nome">NOME</label>
-                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required minlength="3">
 
                             <label for="email">EMAIL</label>
                             <input type="email" id="email" name="email" placeholder="Digite seu email" required>
 
                             <label for="mensagem">MENSAGEM</label>
-                            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem" required></textarea>
+                            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem" required minlength="10"></textarea>
+
+                            <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off"> <!-- Honeypot -->
 
                             <button type="submit" id="botao">ENVIAR</button>
                         </form>
