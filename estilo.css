@@ -133,12 +133,28 @@ header {
     left: 0px;
     width: 100%;
     height: calc(100vh - 60px);
+    overflow-y: auto;
     opacity: 0;
     visibility: hidden;
     background-color: var(--cor-fundo);
     padding: 20px; 
     transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
+
+    -webkit-overflow-scrolling: touch;
 }
+#menu > ul > li:last-child {
+    padding-bottom: 60px; 
+}
+
+@media (max-height: 450px) {
+    #menu > ul > li {
+        padding: 10px;
+    }
+    #menu > ul > li > a {
+        font-size: 18px;
+    }
+}
+
 body.mobile-menu #menu ul {
     opacity: 1;
     width: 100%;
@@ -156,7 +172,6 @@ body.mobile-menu {
     transition: background-color 0.2s ease-out;
 }
 #menu > ul > li:active {
-    background-color: var(--cor-off-fundo);
     color: var(--cor-titulo);
 }
 #menu > ul > li > a {
@@ -182,7 +197,6 @@ body.mobile-menu {
     transition: background-color 0.1s ease-out, transform 0.1s ease-out;
 }
 #menu .interacao:active {
-    background-color: var(--cor-off-fundo);
     color: var(--cor-titulo);
     transform: scale(0.98);
 }
@@ -216,11 +230,25 @@ main {
     font-size: 19px;
 }
 #apresentacao h1 {
-    font-size: 25px;
+    font-size: 22px;
 }
+.typed-cursor {
+    color: var(--destaque);
+    font-size: 1.2em;
+    opacity: 1;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 #apresentacao p {
     font-weight: 300;
-    font-size: 20px;
+    font-size: 1rem;
+    margin: 10px 0px;
     word-wrap: break-word;
     hyphens: auto;
 }
@@ -250,7 +278,7 @@ main {
 }
 #curriculo p {
     text-indent: 0px;
-    font-size: 18px;
+    font-size: 17px;
 }
 #curriculo a {
     background-color: var(--off-destaque);
@@ -286,11 +314,12 @@ main {
     border-radius: 10px;
 }
 .imagem-projeto {
-    width: 100%;
+    max-width: 1200px;
     object-fit: cover;
     overflow: hidden;
 }
 .imagem-projeto img {
+    aspect-ratio: 16 / 9;
     border-radius: 9px 9px 0px 0px;
     border-bottom: 2px solid var(--borda);
     width: 100%;
@@ -302,7 +331,7 @@ main {
     background-color: var(--cor-off-fundo);
     border-radius: 0px 0px 10px 10px;
     hyphens: auto;
-    padding: 15px;
+    padding: 25px;
     gap: 6px;
 }
 .info-projeto h2 {
@@ -341,6 +370,7 @@ main {
 }
 .info-projeto p {
     font-size: 1rem;
+
     hyphens: auto;
 }
 .rodape {
@@ -367,41 +397,54 @@ main {
     font-size: 14px;
     color: var(--off-destaque);
 }
-.icones-opc {
+
+.testimonials-slider {
+    padding: 20px 0 50px 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.swiper-slide {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    font-size: 25px;
-    padding: 5px;
+    transition: transform 0.3s;
 }
-.anterior, .proximo {
+
+#projeto-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.swiper-pagination-bullet {
+    background: var(--off-destaque);
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    width: 20px;
+    border-radius: 5px;
+}
+
+.certificados-slider {
+    width: 100%;
+    overflow: hidden;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.certificados-slider .swiper-slide {
     display: flex;
-    align-items: center;
-    color: var(--cor-titulo);
-    border-radius: 50%;
-    padding: 10px;
-    transition: background-color 0.1s ease-out, transform 0.1s ease-out;
-    cursor: pointer;
+    justify-content: center;
 }
-.anterior:active, .proximo:active {
-    background-color: var(--borda);
-    transform: scale(0.98);
+
+.swiper-pagination-cert {
+    text-align: center;
+    margin-top: 15px;
 }
-.icones-opc .opcoes {
-    display: flex;
-    align-items: center;
-    max-height: 5px;
-    gap: 10px;
-}
-.icones-opc .opcoes span {
-    display: block;
-    width: 10px;
-    height: 10px;
-    padding: 7px;
-    background-color: var(--cor-fonte);
-    border-radius: 50%;
-    transition: background-color 0.3s;
-}
+
 .slider-container {
     overflow: hidden;
     width: 100%;
@@ -512,15 +555,17 @@ main {
 }
 .certificado img {
     width: 100%;
+    max-width: 800px;
     height: 100%;
     object-fit: cover;
     border-radius: 10px 10px 0px 0px;
-    border-bottom: 2px solid var(--borda);
 }
 .info-cert {
     background-color: var(--cor-off-fundo);
     display: grid;
-    padding: 10px 10px 15px 10px;
+    max-width: 800px;
+    padding: 25px;
+    border-radius: 0px 0px 10px 10px;
     hyphens: auto;
     gap: 10px;
 }
@@ -537,41 +582,6 @@ main {
     display: flex;
     justify-content: flex-end;
     font-size: 14px;
-}
-.icones-opc {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 25px;
-    padding: 5px;
-}
-.anterior, .proximo {
-    display: flex;
-    align-items: center;
-    color: var(--cor-titulo);
-    border-radius: 50%;
-    padding: 10px;
-    transition: background-color 0.1s ease-out, transform 0.1s ease-out;
-    cursor: pointer;
-}
-.anterior:active, .proximo:active {
-    background-color: var(--borda);
-    transform: scale(0.98);
-}
-.icones-opc .opcoes {
-    display: flex;
-    align-items: center;
-    max-height: 5px;
-    gap: 10px;
-}
-.icones-opc .opcoes span {
-    display: block;
-    width: 10px;
-    height: 10px;
-    padding: 7px;
-    background-color: var(--cor-fonte);
-    border-radius: 50%;
-    transition: background-color 0.3s;
 }
 
 #experiencia {
@@ -739,13 +749,18 @@ footer p {
 }
 
 @media screen and (min-width: 768px) {
+    #apresentacao h1 {
+    font-size: 32px;
+    }
+
+    #apresentacao p {
+    font-size: 22px;
+    }
     #cont-skill {
         display: grid;
         grid-template-columns: auto auto;
         gap: 20px;
     }
-
-
 }
 
 @media screen and (min-width: 1200px) {

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leonardo Laranjeira</title>
     <link rel="shortcut icon" href="favicon/orange.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="estilo.css">
     <script src="https://kit.fontawesome.com/de8791609d.js" crossorigin="anonymous"></script>
 </head>
@@ -38,13 +39,14 @@
     <main>
         <section id="apresentacao">
             <h3>OLÁ, MEU NOME É LEONARDO!</h3>
-            <h1>Desenvolvedor Fullstack</h1>
-            <p>Sou desenvolvedor e estudante autodidata, gosto de práticar e divulgar meus projetos novos neste portifólio e em meu Github!</p>
+            <h1><span id="typed"></span></h1>
+            <p>Desenvolvedor Fullstack com foco em criar aplicações eficientes e escaláveis. Minha trajetória como autodidata me permitiu desenvolver uma forte capacidade de resolução de problemas e adaptabilidade técnica. Aqui, você encontrará projetos que demonstram meu compromisso com código limpo e soluções práticas, todos documentados em detalhes no meu GitHub.</p>
             <div id="biografia">
                 <div id="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vl0eatPehLs?si=0b_dedMoGzdmeJxW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fI8rwngVROU?si=qrw2mNj9h5_4048r" title="Vídeo de apresentação de Leonardo Laranjeira" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <!--Este ainda não é o vídeo oficial-->
                 </div>
+                <p>Transformo minhas ideias em aplicações reais, unindo lógica de back-end com interfaces intuitivas no front-end. Utilizo este portfólio e meu repositório no GitHub como vitrines da minha evolução técnica e constante busca por melhores práticas de desenvolvimento. Explore meus projetos e veja como transformo estudo em software funcional.</p>
                 <div id="curriculo">
                     <p>Currículo profissional: </p>
                     <a href="arquivos/curriculo_leonardo.pdf" download="Leonardo_Laranjeira_CV.pdf" target="_blank">DOWNLOAD</a>
@@ -53,47 +55,194 @@
         </section>
 
         <section id="projetos">
-            <h1 id="tit-proj">
-                <i class="fa-solid fa-list-check"></i> Projetos
-            </h1>
-            <aside id="container-projetos">
-                <div id="projeto-container">
-                    <div class="imagem-projeto">
-                        <img src="img/projetos/projeto-login.png" alt="Foto do projeto">
-                    </div>
-                    <div class="info-projeto">
-                        <div class="tit-projeto">
-                            <h2>Projeto Login</h2>
-                            <div id="dificuldade">
-                                <P>Nível:</P>
-                                <h2 class="nivel">Médio</h2>
-                            </div>
+    <h1 id="tit-proj">
+        <i class="fa-solid fa-list-check"></i> Projetos
+    </h1>
+
+    <div class="swiper testimonials-slider">
+        <div class="swiper-wrapper">
+            
+                <div class="swiper-slide">
+                    <div id="projeto-container">
+                        <div class="imagem-projeto">
+                            <img src="img/projetos/projeto-login.png" alt="Screenshot do projeto Login com design responsivo">
                         </div>
-                        <div class="links">
-                            <a href="https://github.com/leonardolaranjeira/projeto-login" target="_blank"><i class="fa-brands fa-github"></i> Repositório</a>
-                            <a href="https://leonardolaranjeira.github.io/projeto-login/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demonstração</a>
-                        </div>
-                        <p>Projeto feito em HTML e CSS usando media queries para deixar a página responsiva.</p>
-                        <div class="rodape">
-                            <div class="tools">
-                                <span><i class="fa-brands fa-html5"></i>HTML5</span>
-                                <span><i class="fa-brands fa-css3-alt"></i>CSS3</span>
+                        <div class="info-projeto">
+                            <div class="tit-projeto">
+                                <h2>Projeto Login</h2>
+                                <div id="dificuldade">
+                                    <p>Nível:</p>
+                                    <h2 class="nivel">Básico</h2>
+                                </div>
                             </div>
-                            <h3>Estudo de caso</h3>
+                            <div class="links">
+                                <a href="https://github.com/leonardolaranjeira/projeto-login" target="_blank"><i class="fa-brands fa-github"></i> Repositório</a>
+                                <a href="https://leonardolaranjeira.github.io/projeto-login/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demonstração</a>
+                            </div>
+                            <p>Projeto feito em HTML e CSS usando media queries para diferentes tipos de telas.</p>
+                            <div class="rodape">
+                                <div class="tools">
+                                    <span><i class="fa-brands fa-html5"></i>HTML5</span>
+                                    <span><i class="fa-brands fa-css3-alt"></i>CSS3</span>
+                                </div>
+                                <h3>Estudo prático</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </aside>
-            <div class="icones-opc">
-                <span class="anterior"><i class="fa-solid fa-arrow-left"></i></span>
-                <div class="opcoes">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+
+                <div class="swiper-slide">
+                    <div id="projeto-container">
+                        <div class="imagem-projeto">
+                            <img src="img/projetos/projeto-android.png" alt="Screenshot do projeto Android com design responsivo">
+                        </div>
+                        <div class="info-projeto">
+                            <div class="tit-projeto">
+                                <h2>Projeto android</h2>
+                                <div id="dificuldade">
+                                    <p>Nível:</p>
+                                    <h2 class="nivel">Intermediário</h2>
+                                </div>
+                            </div>
+                            <div class="links">
+                                <a href="https://github.com/leonardolaranjeira/projeto-android" target="_blank"><i class="fa-brands fa-github"></i> Repositório</a>
+                                <a href=https://leonardolaranjeira.github.io/projeto-android/ target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demonstração</a>
+                            </div>
+                            <p>Um projeto um pouco mais completo usando apenas HTML5 e CSS3, com menus de navegação e links clicáveis com responsividade para diferentes tipos de telas.</p>
+                            <div class="rodape">
+                                <div class="tools">
+                                    <span><i class="fa-brands fa-html5"></i>HTML5</span>
+                                    <span><i class="fa-brands fa-css3-alt"></i>CSS3</span>
+                                </div>
+                                <h3>Estudo prático</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <span class="proximo"><i class="fa-solid fa-arrow-right"></i></span>
+
+                <div class="swiper-slide">
+                    <div id="projeto-container">
+                        <div class="imagem-projeto">
+                            <img src="img/projetos/projeto-cordel.png" alt="Screenshot do projeto Cordel Moderno com efeitos de parallax e responsividade">
+                        </div>
+                        <div class="info-projeto">
+                            <div class="tit-projeto">
+                                <h2>Cordel Moderno</h2>
+                                <div id="dificuldade">
+                                    <p>Nível:</p>
+                                    <h2 class="nivel">Básico</h2>
+                                </div>
+                            </div>
+                            <div class="links">
+                                <a href="https://github.com/leonardolaranjeira/projeto-cordel" target="_blank"><i class="fa-brands fa-github"></i> Repositório</a>
+                                <a href="https://leonardolaranjeira.github.io/projeto-cordel/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demonstração</a>
+                            </div>
+                            <p>Projeto dedicado a praticar técnicas de parallax de background com CSS3.</p>
+                            <div class="rodape">
+                                <div class="tools">
+                                    <span><i class="fa-brands fa-html5"></i>HTML5</span>
+                                    <span><i class="fa-brands fa-css3-alt"></i>CSS3</span>
+                                </div>
+                                <h3>Estudo prático</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div id="projeto-container">
+                        <div class="imagem-projeto">
+                            <img src="img/projetos/projeto-redes-sociais.png" alt="Screenshot do projeto Redes Sociais com botões interativos e iframes">
+                        </div>
+                        <div class="info-projeto">
+                            <div class="tit-projeto">
+                                <h2>Projeto redes sociais</h2>
+                                <div id="dificuldade">
+                                    <p>Nível:</p>
+                                    <h2 class="nivel">Básico</h2>
+                                </div>
+                            </div>
+                            <div class="links">
+                                <a href="https://github.com/leonardolaranjeira/projeto-social" target="_blank"><i class="fa-brands fa-github"></i> Repositório</a>
+                                <a href="https://leonardolaranjeira.github.io/projeto-social/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demonstração</a>
+                            </div>
+                            <p>Utilizando novos aprendizados de aplicar iframes e posicionar botões com efeitos de pseudo-classes.</p>
+                            <div class="rodape">
+                                <div class="tools">
+                                    <span><i class="fa-brands fa-html5"></i>HTML5</span>
+                                    <span><i class="fa-brands fa-css3-alt"></i>CSS3</span>
+                                </div>
+                                <h3>Estudo prático</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div id="projeto-container">
+                        <div class="imagem-projeto">
+                            <img src="img/projetos/projeto-portifólio-CEV.png" alt="Screenshot do projeto portfólio completo feito na prática do 'curso de HTML e CSS'">
+                        </div>
+                        <div class="info-projeto">
+                            <div class="tit-projeto">
+                                <h2>Portfólio completo</h2>
+                                <div id="dificuldade">
+                                    <p>Nível:</p>
+                                    <h2 class="nivel">Intermediário</h2>
+                                </div>
+                            </div>
+                            <div class="links">
+                                <a href="https://github.com/leonardolaranjeira/projeto-portifolio" target="_blank"><i class="fa-brands fa-github"></i> Repositório</a>
+                                <a href="https://leonardolaranjeira.github.io/projeto-portifolio/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demonstração</a>
+                            </div>
+                            <p>Modelo prático e de exemplo de portfólio completo para estudar todos os tópicos do curso de HTML5 e CSS3.</p>
+                            <div class="rodape">
+                                <div class="tools">
+                                    <span><i class="fa-brands fa-html5"></i>HTML5</span>
+                                    <span><i class="fa-brands fa-css3-alt"></i>CSS3</span>
+                                    <span><i class="fa-brands fa-js"></i>JAVASCRIPT</span>
+                                </div>
+                                <h3>Estudo prático</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div id="projeto-container">
+                        <div class="imagem-projeto">
+                            <img src="img/projetos/meuportfolio.png" alt="Screenshot do projeto portfólio completo feito na prática do 'curso de HTML e CSS'">
+                        </div>
+                        <div class="info-projeto">
+                            <div class="tit-projeto">
+                                <h2>Meu portfólio</h2>
+                                <div id="dificuldade">
+                                    <p>Nível:</p>
+                                    <h2 class="nivel">Intermediário</h2>
+                                </div>
+                            </div>
+                            <div class="links">
+                                <a href="https://github.com/leonardolaranjeira/meuportfolio" target="_blank"><i class="fa-brands fa-github"></i> Repositório</a>
+                                <a href="https://leonardolaranjeira.github.io/meuportfolio/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demonstração</a>
+                            </div>
+                            <p>Implementei este projeto com foco total nos meus estudos para ingressar no mercado de tecnologia. Ele representa o início da minha jornada e continuará sendo aperfeiçoado, sendo o primeiro de muitos projetos que pretendo desenvolver.</p>
+                            <div class="rodape">
+                                <div class="tools">
+                                    <span><i class="fa-brands fa-html5"></i>HTML5</span>
+                                    <span><i class="fa-brands fa-css3-alt"></i>CSS3</span>
+                                    <span><i class="fa-brands fa-js"></i>JAVASCRIPT</span>
+                                </div>
+                                <h3>Desenvolvimento pessoal</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </section>
+        
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
 
         <section id="habilidades">
             <h1>
@@ -321,41 +470,76 @@
             </h1>
 
             <div class="slider-container">
-                <div class="slider-track">
-                    <aside class="slide">
-                        <div class="certificado">
-                            <img src="img/certificados/mund1-python3.png" alt="Certificação Python 3">
-                        </div>
-                        <div class="info-cert">
-                            <h2>Python 3 - Módulo 1</h2>
-                            <p>Este curso foi dedicado a ter os meus primeiros contatos com a programação. Estudei lógica de programação baseada em python.</p>
-                            <span>40 HORAS</span>
-                        </div>
-                    </aside>
+                <div class="swiper certificados-slider">
+                    <div class="swiper-wrapper">
 
-                    <aside class="slide">
-                        <div class="certificado">
-                            <img src="img/certificados/diploma-gti.png" alt="Diploma Gestão da Tecnologia da Informação">
+                        <div class="swiper-slide">
+                            <aside class="slide-cert"> <div class="certificado">
+                                    <img src="img/certificados/mund1-python3.png" alt="Certificação Python 3">
+                                </div>
+                                <div class="info-cert">
+                                    <h2>Python 3 - Módulo 1</h2>
+                                    <p>Este curso foi dedicado a ter os meus primeiros contatos com a programação e análise de dados.</p>
+                                    <span>40 HORAS</span>
+                                </div>
+                            </aside>
                         </div>
-                        <div class="info-cert">
-                            <h2>CST - Gestão da tecnologia da informação</h2>
-                            <p>O curso de Gestão de Tecnologia da Informação me proporcionou o conhecimento para gerenciar projetos, coordenar equipes e alinhar as soluções tecnológicas com as necessidades da empresa.</p>
-                            <div>
-                                <span></span>
-                            </div>
+
+                        <div class="swiper-slide">
+                            <aside class="slide-cert">
+                                <div class="certificado">
+                                    <img src="img/certificados/diploma-gti.png" alt="Diploma Gestão da Tecnologia da Informação">
+                                </div>
+                                <div class="info-cert">
+                                    <h2>CST - Gestão da tecnologia da informação</h2>
+                                    <p>O curso de Gestão de Tecnologia da Informação me proporcionou o conhecimento abrangente da área da tecnologia da informação, foi um primeiro contato real com ferramentas de hardware e software com o cunho profissional.</p>
+                                    <span>GRADUAÇÃO</span>
+                                </div>
+                            </aside>
                         </div>
-                    </aside>
+
+                        <div class="swiper-slide">
+                            <aside class="slide-cert">
+                                <div class="certificado">
+                                    <img src="img/certificados/python3-modulo3.png" alt="Certificação Python 3 - Módulo 3">
+                                </div>
+                                <div class="info-cert">
+                                    <h2>Python 3 - Módulo 3</h2>
+                                    <p>Este curso foi dedicado a ter os meus primeiros contatos com a programação e analise de dados.</p>
+                                    <span>40 HORAS</span>
+                                </div>
+                            </aside>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <aside class="slide-cert">
+                                <div class="certificado">
+                                    <img src="img/certificados/javascript.png" alt="Certificação JavaScript">
+                                </div>
+                                <div class="info-cert">
+                                    <h2>JAVASCRIPT</h2>
+                                    <p>Dediquei este certificado ao início do entendimento do padrão DOM e para o desenvolvimento do meu portfólio.</p>
+                                    <span>40 HORAS</span>
+                                </div>
+                            </aside>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <aside class="slide-cert">
+                                <div class="certificado">
+                                    <img src="img/certificados/git-github.png" alt="Certificação GIT e GITHUB">
+                                </div>
+                                <div class="info-cert">
+                                    <h2>GIT & GITHUB</h2>
+                                    <p>Meu primeiro contato com versionamento e ensinamentos básicos de divisão de tarefas, em um mesmo projeto.</p>
+                                    <span>20 HORAS</span>
+                                </div>
+                            </aside>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination-cert"></div>
                 </div>
-            </div>
-            
-            <div class="icones-opc">
-                <span class="anterior"><i class="fa-solid fa-arrow-left"></i></span>
-                <div class="opcoes">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <span class="proximo"><i class="fa-solid fa-arrow-right"></i></span>
             </div>
         </section>
 
@@ -367,13 +551,13 @@
                 <div class="exp-item">
                     <h2>BALCONISTA</h2>
                     <h3>AVIAMENTOS BRUSQUE LTDA | ATUALMENTE</h3>
-                    <p>Nesta empresa eu desenvolvi meu conhecimento na área de vendas, estoque e operação de caixa. Eu me dediquei a aprender tudo o que foi possível e fiz meu melhor em ajudar da melhor forma para contríbuir no trabalho em equipe, suprindo as necessidades do dia a dia.</p>
+                    <p>Nesta empresa eu desenvolvi meu conhecimento na área de vendas, estoque e operação de caixa. Eu me dediquei a aprender tudo o que foi possível e fiz meu melhor em ajudar da melhor forma para contribuir no trabalho em equipe, suprindo as necessidades do dia a dia.</p>
                 </div>
 
                 <div class="exp-item">
                     <h2>OPERADOR DE LOJA (JOVEM APRENDIZ)</h2>
                     <h3>DIA BRASIL LTDA | 2019 - 2020</h3>
-                    <p>Foi um emprego com <strong>prazo determinado</strong> onde aprendi a trabalhar na área de varejo e comecei a entender a rotina de um empregado de forma básica. Desenvolvi "soft skills" como organização, limpeza, reposição e auxilio ao cliente.</p>
+                    <p>Foi um emprego com <strong>prazo determinado</strong> onde aprendi a trabalhar na área de varejo e comecei a entender a rotina de um empregado de forma básica. Desenvolvi "soft skills" como organização, limpeza, reposição e auxílio ao cliente.</p>
                 </div>
 
                 <div class="exp-item">
@@ -421,6 +605,25 @@
         <p>&copy; <strong><a href="https://github.com/leonardolaranjeira" target="_blank">Leonardo Laranjeira</a></strong> - Todos os direitos reservados | Desenvolvido por <strong><a href="https://www.linkedin.com/in/leonardo-laranjeira-796a391b7/" target="_blank">Leonardo Laranjeira</a></strong></p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+    var typed = new Typed('#typed', {
+        strings: [
+            'Desenvolvedor de software',
+            'Desenvolvedor Fullstack',
+            'Desenvolvedor Backend',
+            'Estudante Autodidata',
+            'UX Designer',
+        ],
+        typeSpeed: 50,
+        backSpeed: 30,      
+        backDelay: 2000,    
+        loop: true,         
+        showCursor: true,   
+        cursorChar: '|'     
+    });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,15 +1,4 @@
 
-// Menu escondido para celular
-
-
-/*
- - Contar os slides (.slide).
-
- - Criar as bolinhas (indicadores) e marcar a bolinha active.
-
- - Mudar o transform: translateX() do .slider-track quando as setas ou bolinhas forem clicadas.
- */
-
 document.getElementById('perfil').addEventListener('click', function() {
     window.scrollTo({
         top: 0, 
@@ -17,36 +6,32 @@ document.getElementById('perfil').addEventListener('click', function() {
     });
 });
 
- /**
-   * Mobile nav toggle
-   */
-  const mobileNav = document.querySelector('#bars_menu');
 
-  function mobileNavToogle() {
-    const isExpanded = document.querySelector('body').classList.toggle('mobile-menu');
-    mobileNav.classList.toggle('listar');
-    mobileNav.classList.toggle('fechar');
+// Menu mobile
+const mobileNav = document.querySelector('#bars_menu');
 
-    mobileNav.setAttribute('aria-expanded', isExpanded);
-  }
-  if (mobileNav) {
-    mobileNav.addEventListener('click', mobileNavToogle);
-  }
+function mobileNavToogle() {
+  const isExpanded = document.querySelector('body').classList.toggle('mobile-menu');
+  mobileNav.classList.toggle('listar');
+  mobileNav.classList.toggle('fechar');
 
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
-  document.querySelectorAll('#menu a').forEach(menu => {
-    menu.addEventListener('click', () => {
-      if (document.querySelector('#bars_menu')) {
-        mobileNavToogle();
-      }
-    });
+  mobileNav.setAttribute('aria-expanded', isExpanded);
+}
+if (mobileNav) {
+  mobileNav.addEventListener('click', mobileNavToogle);
+}
 
+// Menu escondido
+document.querySelectorAll('#menu a').forEach(menu => {
+  menu.addEventListener('click', () => {
+    if (document.querySelector('#bars_menu')) {
+      mobileNavToogle();
+    }
   });
 
-  /* Mudar o tema da página */
-  
+});
+
+/* Mudar o tema da página */
 const botao = document.getElementById('botao-tema');
 const body = document.body;
 
@@ -85,4 +70,33 @@ navLinks.forEach(link => {
       });
     }
   });
+});
+
+// Slider dos projetos e certificações
+const swiperProjetos = new Swiper('.testimonials-slider', {
+  autoHeight: true,
+  loop: true,
+  autoplay: { delay: 5000, disableOnInteraction: false },
+  slidesPerView: 1,
+  spaceBetween: 30,
+  pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+  },
+});
+
+const swiperCertificados = new Swiper('.certificados-slider', {
+  autoHeight: true,
+  loop: true,
+  speed: 800,
+  autoplay: { 
+      delay: 5000,
+      disableOnInteraction: false 
+  },
+  slidesPerView: 1,
+  spaceBetween: 30,
+  pagination: {
+      el: '.swiper-pagination-cert',
+      clickable: true,
+  },
 });
