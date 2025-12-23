@@ -100,3 +100,6 @@ const swiperCertificados = new Swiper('.certificados-slider', {
       clickable: true,
   },
 });
+
+// Os scripts contidos neste arquivo foram estudados e praticados com base em curso e documentalções dedicadas ao Javascript, DOM, Swiper.js e boas práticas de desenvolvimento web.
+// Usei nomenclaturas em inglês e algumas em português para identificação de pontos onde preciso praticar e entender mais sobre cada tópico abordado.
